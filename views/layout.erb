@@ -26,13 +26,18 @@
     </article>
     <article class="one_third">
       <div class="float_right">
-        Join
-        SignIn
+        <button type="button" formmethod="post" onclick="myFunction()">Join</button>
+        <a href="/registration"><button type="button" formmethod="post">SignIn</button></a>
        </div>
     </article>
   </div>
 </header>
 
+<script>
+  function myFunction() {
+    window.open("/registration", "_blank", "toolbar=no, scrollbars=no, resizable=no, top=500, left=500, width=400, height=400");
+  }
+</script>
 
 
 <div id="content">
