@@ -1,0 +1,118 @@
+
+/*
+	STYLE.CSS:
+	One stylesheet to rule them all.
+
+	selector { property:value }
+
+*/
+
+
+
+/* ----- =structure ----- */
+
+body {
+    background-color:#000;
+
+}
+
+header {
+    background-color: #c5c5c5;
+    height: 50px;
+}
+
+header img {
+    width: 100px;
+    height: 30px;
+}
+
+#content {
+    background-color: #fff;
+}
+
+footer {
+    background-color: lightgrey;
+    height: 50px
+}
+
+.wrapper {
+    margin: auto;
+    width: 980px;
+}
+
+
+/* ----- =columns ----- */
+
+.one_half { 	 width:460px; }
+.one_third {	 width:300px; }
+.two_third {	 width:620px; }
+.one_fourth {	 width:220px; }
+.three_fourth { width:700px; }
+.full_column {	 width:940px; }
+
+article {
+    position:relative;
+    margin-left:20px;
+    margin-bottom:16px;
+    float:left;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+
+.clearfix:after { clear: both; }
+
+/* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+.clearfix { *zoom: 1; }
+
+
+/* DEMO STYLE - Box Outlines  */
+
+article {
+    box-sizing:border-box;
+}
+
+section {
+    box-sizing:border-box;
+    padding: 20px 0 10px 0;
+}
+
+.one_fourth h2 {
+    text-align: center;
+}
+
+.fa-stack {
+    margin-left: 50px;
+}
+
+
+
+/* LINDSAY'S CSS  */
+.homepage_head{
+    text-align: center;
+    height: 200px;
+}
+
+.float_right{
+    float:right
+}
+
+
+a:link {
+    text-decoration: darkgrey;
+}
+a:visited{
+    text-decoration: darkgrey;
+}
+a:hover{
+    text-decoration: #ffffff;
+}
