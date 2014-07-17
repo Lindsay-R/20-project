@@ -17,6 +17,10 @@ class App < Sinatra::Application
     erb :homepage
   end
 
+  get "/registration" do
+    erb :registration
+  end
+
 
 
 end #class end

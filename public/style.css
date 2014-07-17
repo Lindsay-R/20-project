@@ -12,18 +12,20 @@
 /* ----- =structure ----- */
 
 body {
-    background-color:#000;
+    background-color:#fff;
 
 }
 
 header {
-    background-color: #c5c5c5;
-    height: 50px;
+    background-color: #fff;
+    height: 40px;
+    border-bottom:thin solid #515257;
+    margin-top: 20px;
 }
 
 header img {
-    width: 100px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 
 #content {
@@ -97,9 +99,31 @@ section {
 
 
 /* LINDSAY'S CSS  */
-.homepage_head{
-    text-align: center;
-    height: 200px;
+.homepage_main{
+    color: #000;
+    height: 320px;
+    background-image:url('http://maxcdn.creativeadawards.com/wp-content/uploads/2010/09/Typography-Burger-o.jpg');
+    background-color:#cccccc;
+}
+.homepage_main h1{
+    color: #38383B;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 50px;
+    text-shadow: -5px 4px 10px #96917B;
+    padding-top: 50px;
+}
+.homepage_main h2{
+    color: #38383B;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 50px;
+}
+.homepage_main form{
+    padding-left: 50px;
+}
+.input_home_main {
+    width: 180px;
 }
 
 .float_right{
