@@ -1,17 +1,23 @@
 <!--Join-->
+<div class="join_signin_wrap">
+
 <h1>Join Website </h1>
 <h2>Everyone loves us, <br> you will too!</h2>
 
+  <span class="error_flash"><%= flash[:error_flash] %></span><br><br>
+
 <form action="/registration" method="post">
-  <input id="POST-email" type="text" name="email" placeholder="Email" required><br>
-  <input id="POST-username" type="text" name="username" placeholder="Username" required><br>
-  <input id="POST-create_password" type="text" name="create_password" placeholder="Create Password" required><br>
-  <input type="submit" value="Join">
+  <input class="input" id="email" type="text" name="email" placeholder="Email"><br>
+  <input class="input" id="username" type="text" name="username" placeholder="Username"><br>
+  <input class="input" id="password" type="text" name="password" placeholder="Create Password"><br>
+  <input id="log_button" type="submit" value="Join">
 </form>
 
 <div>
   <h3>
-    Already a member? <br>
-    <a href="/homepage">SignIn</a>
+    Already a member?
+    <span class="space_between_links"><a href="/signin">SignIn</a></span>
   </h3>
+</div>
+
 </div>

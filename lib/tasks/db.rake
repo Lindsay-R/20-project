@@ -42,7 +42,7 @@ namespace :db do
 
   desc "Rollback the database for the current environment"
   task :rollback do
-    DatabaseConnection.establish(env)
+    GschoolDatabaseConnection::DatabaseConnection.establish(env)
     ActiveRecord::Migrator.rollback(db_dir)
   end
 

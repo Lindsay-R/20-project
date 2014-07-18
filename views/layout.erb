@@ -2,15 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-
-  <title>Font Type Inspiration</title>
-
+  <title>Typography Inspiration</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-
+  <link href="/style.css" rel="stylesheet" type="text/css" />
 </head>
-
-
 
 <body>
 
@@ -19,35 +14,33 @@
 
     <!--top left Logo-->
     <article class="one_third">
-      <a href = "/homepage"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTf-KXY2TEvgcqF5_MPP6PAV5nI975bh7WYGIhw76egFv_dfY70dA" alt="Logo" /></a>
+      <div class="logo">
+      <a href = "/"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcROXRzJq3PhhxFISXZ8BMJUE5VhLbaqc-Cis5lhBsM-mzjZ272a" alt="Logo" /></a>
+      </div>
     </article>
 
     <!--top Quick Links-->
     <article class="one_third">
-        <a href = "http://www.webpage.com">Link</a>
-        <a href = "http://www.webpage.com">Link</a>
-        <a href = "http://www.webpage.com">Link</a>
-        <a href = "http://www.webpage.com">Link</a>
+      <div class="quick_links">
+        <span class="space_between_links"><a href = "http://www.webpage.com">Link</a></span>
+        <span class="space_between_links"><a href = "http://www.webpage.com">Link</a></span>
+        <span class="space_between_links"><a href = "http://www.webpage.com">Link</a></span>
+        <span class="space_between_links"><a href = "http://www.webpage.com">Link</a></span>
+      </div>
     </article>
 
     <!--top right Join/SignIn Buttons-->
     <article class="one_third">
-      <div class="float_right">
+      <div class="join_signin_buttons">
 
-        <a href="/registration">Join</a>
-        <a href="/homepage">SignIn</a>
+        <span class="space_between_links"><a href="/registration">Join</a></span>
+        <span class="space_between_links"><a href="/signin">SignIn</a></span>
 
        </div>
     </article>
 
   </div>
 </header>
-
-<script>
-  function myFunction() {
-    window.open("/registration", "_blank", "toolbar=no, scrollbars=no, resizable=no, top=500, left=500, width=400, height=400");
-  }
-</script>
 
 
 <div id="content">
@@ -57,7 +50,9 @@
       <section class="clearfix">
 
 
+
         <%= yield %>
+
 
 
       </section>

@@ -20,7 +20,11 @@ header {
     background-color: #fff;
     height: 40px;
     border-bottom:thin solid #515257;
-    margin-top: 20px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+
+    /*display: inline;*/
+    /*vertical-align: bottom;*/
 }
 
 header img {
@@ -123,20 +127,66 @@ section {
     padding-left: 50px;
 }
 .input_home_main {
-    width: 180px;
+    width: 205px;
 }
 
-.float_right{
-    float:right
+.logo{
+    height:40px;
+}
+.quick_links{
+    height:20px;
+    margin-top: 20px;
+}
+.join_signin_buttons{
+    float:right;
+    height:20px;
+    margin-top: 20px;
+}
+.space_between_links{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+.join_signin_wrap{
+    padding: 30px 0px 5px 50px;
+    width: 300px;
+    border:thin solid #515257;
+}
+
+.join_signin_wrap h1{
+    font-size: 30px;
+    margin: 0;
+}
+.join_signin_wrap h2{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.join_signin_wrap h3{
+    font-size: 14px;
+}
+.join_signin_wrap .input{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
 a:link {
-    text-decoration: darkgrey;
+    color: darkgrey;
+    text-decoration: none;
 }
 a:visited{
-    text-decoration: darkgrey;
+    color: darkgrey;
+    text-decoration: none;
 }
 a:hover{
-    text-decoration: #ffffff;
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.error_flash {
+    color: red;
+}
+
+.non_error_flash {
+    color: greenyellow;
 }
