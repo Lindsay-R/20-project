@@ -4,12 +4,46 @@
 
 
   <!--Userpage... User is signed in-->
-  <span class="non_error_flash"><%= flash[:notice] %></span>
-  <h1 class="greeting">Welcome, <%= user %></h1>
 
-  <form action="/logout" method="post">
-    <input id ="log_button" type="submit" value="Logout">
-  </form>
+  <div class="userpage_search">
+    <form action="">
+      <input class="input_home_main" id="search" type="text" name="search">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+
+  <div class="userpage_categories">
+    <select name="Categories">
+      <option value="" disabled="disabled" selected="selected">Categories</option>
+      <option value="value1">Value 1</option>
+      <option value="value2">Value 2</option>
+    </select>
+  </div>
+
+  <div class="userpage_welcome">
+  <h1 class="greeting">Welcome, <%= user.capitalize %></h1>
+  </div>
+
+  <br>
+
+
+
+  <!--signed in homepage 1/4 squares-->
+  <article class="one_fourth">
+    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
+  </article>
+
+  <article class="one_fourth">
+    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
+  </article>
+
+  <article class="one_fourth">
+    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
+  </article>
+
+  <article class="one_fourth">
+    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
+  </article>
 
 <% else %>
 <!--else not logged in-->

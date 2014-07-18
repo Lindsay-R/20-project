@@ -56,9 +56,10 @@ class App < Sinatra::Application
         flash[:error_flash] = "Username is already in use, please choose another."
         redirect "/registration"
       end
-      flash[:notice] = "Thank you for registering"
+      flash[:notice] = "Thank you for registering, please signin."
       @users_table.create(params[:email], params[:username], params[:password])
-      redirect "/"
+      redirect "/signin"
+
     end
   end
 

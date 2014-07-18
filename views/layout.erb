@@ -30,13 +30,53 @@
     </article>
 
     <!--top right Join/SignIn Buttons-->
-    <article class="one_third">
-      <div class="join_signin_buttons">
+      <% if session[:user_id] %>
+        <% user = @users_table.find(session[:user_id])["username"] %>
+        <!--if logged in-->
 
-        <span class="space_between_links"><a href="/registration">Join</a></span>
-        <span class="space_between_links"><a href="/signin">SignIn</a></span>
+          <article class="one_third">
+            <div class="join_signin_buttons">
+              <form action="/logout" method="post">
+                <input class="strip_button" type="submit" value=" Logout">
+              </form>
 
-       </div>
+            <nav>
+
+
+              <select name="forma" onchange="location = this.options[this.selectedIndex].value;">
+                <option value="" selected="selected"><%= user.capitalize %></option>
+                <option value="/favorites">Favorites</option>
+                <option value="/registration">Link</option>
+                <option value="/settings">Settings</option>
+              </select>
+            </nav>
+
+            </div>
+          </article>
+
+
+      <% else %>
+      <!--else not logged in-->
+
+          <article class="one_third">
+            <div class="join_signin_buttons">
+
+              <span class="space_between_links"><a href="/registration">Join</a></span>
+              <span class="space_between_links"><a href="/signin">SignIn</a></span>
+
+            </div>
+          </article>
+
+      <% end %> <!--end user session-->
+
+
+    <!--Flash notices-->
+    <article class="full_column">
+      <div class="flash_block">
+        <span class="error_flash"><%= flash[:error_flash] %></span>
+        <span class="non_error_flash"><%= flash[:notice] %></span>
+        <span class="error_flash"><%= flash[:please_signin] %></span>
+      </div>
     </article>
 
   </div>
