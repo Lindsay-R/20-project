@@ -44,6 +44,7 @@ feature "Basics: Userpage." do
 
     expect(page).to have_content "Lindsay"
     expect(page).to have_button("Search")
+    expect(page).to have_button("Logout")
   end
 
 end #feature end
