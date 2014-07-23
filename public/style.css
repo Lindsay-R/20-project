@@ -188,6 +188,13 @@ section {
     padding-top: 10px;
 }
 
+
+.fourth_discript{
+    border-bottom:thin solid lightgrey;
+    border-left:thin solid lightgrey;
+    text-align: center;
+}
+
 a:link {
     color: darkgrey;
     text-decoration: none;

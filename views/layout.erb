@@ -36,20 +36,18 @@
 
           <article class="one_third">
             <div class="join_signin_buttons">
-              <form action="/logout" method="post">
-                <input class="strip_button" type="submit" value=" Logout">
-              </form>
-
-            <nav>
 
 
-              <select name="forma" onchange="location = this.options[this.selectedIndex].value;">
+              <select>
                 <option value="" selected="selected"><%= user.capitalize %></option>
                 <option value="/favorites">Favorites</option>
                 <option value="/registration">Link</option>
                 <option value="/settings">Settings</option>
               </select>
-            </nav>
+
+              <form action="/logout" method="post">
+                <input class="strip_button" type="submit" value=" Logout">
+              </form>
 
             </div>
           </article>
