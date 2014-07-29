@@ -104,23 +104,20 @@ class App < Sinatra::Application
 
   #---Post page Form---
   post "/post_page" do
-    p_id = @posts_table.create(
-      image,
-      description,
-      session[:user_id]
-    )
+
     image = params[:image]
     description = params[:description]
+    @posts_table.create(image, description, session[:user_id])
 
     flash[:notice] = "Post created"
-    redirect "/view_post/#{p_id}"
+    redirect "/"
   end
 
   # ---link to View page---
-  get "/view_post/:p_id" do
-    post = @posts_table.find(params[:p_id])
-    erb :"view_post", locals: {post: post}
-  end
+  # get "/view_post/:p_id" do
+  #   post = @posts_table.find(params[:p_id])
+  #   erb :"view_post", locals: {post: post}
+  # end
 
 
   # ---patch to View page---
@@ -130,6 +127,7 @@ class App < Sinatra::Application
   #     description: params[:description]
   #   })
   # end
+
 
 
 end #class end

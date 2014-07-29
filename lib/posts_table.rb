@@ -13,14 +13,14 @@ class PostsTable
     @database_connection.sql(insert_post_sql).first["id"]
   end
 
-  def find(p_id)
-    find_sql = <<-SQL
-      SELECT * FROM users
-      WHERE id = #{p_id}
-    SQL
-
-    @database_connection.sql(find_sql).first
-  end
+  # def find(p_id)
+  #   find_sql = <<-SQL
+  #     SELECT * FROM users
+  #     WHERE id = #{p_id}
+  #   SQL
+  #
+  #   @database_connection.sql(find_sql).first
+  # end
 
 
   def all
