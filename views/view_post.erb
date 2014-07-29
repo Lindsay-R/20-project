@@ -1,0 +1,27 @@
+<!--# make editable...patch, for signed in user-->
+<!--# have a "comment"...post, section for visitors-->
+
+<% if session[:user_id] %> <!--if logged in-->
+  <% user = @users_table.find(session[:user_id])["username"] %>
+
+<h2>Posted By <%= user.capitalize %></h2>
+
+<form action="/view_post/<%= post["p_id"] %>" method="post">
+  <input type="hidden" name="_method" value="patch"/>
+
+  <label for="image">Image http address</label>
+  <input type="text" name="image" id="image" value="<%= post["image"] %>"/>
+  <br>
+  <br>
+  <label for="description">Description:</label>
+  <textarea type="text" col="40" row="5" id="description" name="description" value="<%= post["description"] %>"></textarea>
+  <br>
+  <br>
+  <input type="submit" value="Update Post"/>
+
+</form>
+
+<% else %> <!--else not logged in-->
+
+
+<% end %> <!--end user session-->

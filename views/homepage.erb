@@ -27,35 +27,23 @@
   <br>
 
 
-
   <!--signed in homepage 1/4 squares-->
-  <article class="one_fourth">
-    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-    <div class="fourth_discript">
-      <p>Some text stuff goes here about the image above.</p>
-    </div>
-  </article>
 
-  <article class="one_fourth">
-    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-    <div class="fourth_discript">
-      <p>Some text stuff goes here about the image above.</p>
-    </div>
-  </article>
+    <% posts.each do |user_post| %>
+    <a href="/view_post/<%= user_post["p_id"] %>">
+      <article class="one_fourth">
+        <div class="square_img">
+        <img src="<%= user_post["image"] %>" />
+        </div>
+        <div class="fourth_discript">
+        <p><%= user_post["description"] %></p>
+        </div>
+      </article>
+    </a>
+    <% end %>
 
-  <article class="one_fourth">
-    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-    <div class="fourth_discript">
-      <p>Some text stuff goes here about the image above.</p>
-    </div>
-  </article>
 
-  <article class="one_fourth">
-    <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-    <div class="fourth_discript">
-      <p>Some text stuff goes here about the image above.</p>
-    </div>
-  </article>
+
 
 <% else %>
 <!--else not logged in-->
@@ -76,33 +64,16 @@
     </article>
 
     <!--Homepage 1/4 squares-->
+  <% posts.each do |post| %>
     <article class="one_fourth">
-      <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
+      <div class="square_img">
+        <img src="<%= post["image"] %>" />
+      </div>
       <div class="fourth_discript">
-        <p>Some text stuff goes here about the image above.</p>
+        <p><%= post["description"] %></p>
       </div>
     </article>
-
-    <article class="one_fourth">
-      <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-      <div class="fourth_discript">
-        <p>Some text stuff goes here about the image above.</p>
-      </div>
-    </article>
-
-    <article class="one_fourth">
-      <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-      <div class="fourth_discript">
-        <p>Some text stuff goes here about the image above.</p>
-      </div>
-    </article>
-
-    <article class="one_fourth">
-      <img src="images/homepage/my_image.jpg" width="" height="" alt=""/>
-      <div class="fourth_discript">
-        <p>Some text stuff goes here about the image above.</p>
-      </div>
-    </article>
+  <% end %>
 
 
 

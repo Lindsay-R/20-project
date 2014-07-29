@@ -49,16 +49,22 @@ footer {
 .one_half { 	 width:460px; }
 .one_third {	 width:300px; }
 .two_third {	 width:620px; }
-.one_fourth {	 width:220px; }
+.one_fourth {    width:220px; }
+
+.square_img {
+    height: 150px;
+    overflow: hidden;
+    border:thin solid lightgrey;
+}
+.square_img img{
+    width: 100%;
+
+}
+
 .three_fourth { width:700px; }
 .full_column {	 width:940px; }
 
-article {
-    position:relative;
-    margin-left:20px;
-    margin-bottom:16px;
-    float:left;
-}
+
 
 
 img {
@@ -81,11 +87,15 @@ img {
 /* DEMO STYLE - Box Outlines  */
 
 article {
-    box-sizing:border-box;
+    /*box-sizing:border-box;*/
+    position:relative;
+    margin-left:20px;
+    margin-bottom:16px;
+    float:left;
 }
 
 section {
-    box-sizing:border-box;
+    /*box-sizing:border-box;*/
     padding: 20px 0 10px 0;
 }
 
@@ -190,9 +200,22 @@ section {
 
 
 .fourth_discript{
+    margin-top: 8px;
     border-bottom:thin solid lightgrey;
     border-left:thin solid lightgrey;
+    background: -webkit-linear-gradient(white, whitesmoke); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, whitesmoke); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, whitesmoke); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, whitesmoke); /* Standard syntax */
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    height: 80px;
+    overflow: hidden;
+}
+.fourth_discript p {
+    width: 100%;
 }
 
 a:link {

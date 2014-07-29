@@ -20,10 +20,11 @@ class App < Sinatra::Application
   end
 
   get "/" do
-    if session[:user_id]
-      puts "We still have a session id #{session[:id]}"
-    end
-    erb :homepage
+    # if session[:user_id]
+    #   puts "We still have a session id #{session[:id]}"
+    # end
+    posts = @posts_table.all
+    erb :homepage, locals: {posts: posts}
   end
 
   #---link to Join---
@@ -102,12 +103,33 @@ class App < Sinatra::Application
   end
 
   #---Post page Form---
-  # post "/post_page" do
-  #   image = params[:image]
-  #   description = params[:description]
-  #   @posts_table.create(image, description)
-  #   flash[:notice] = "Post created"
-  #   redirect "/"
+  post "/post_page" do
+    p_id = @posts_table.create(
+      image,
+      description,
+      session[:user_id]
+    )
+    image = params[:image]
+    description = params[:description]
+
+    flash[:notice] = "Post created"
+    redirect "/view_post/#{p_id}"
+  end
+
+  # ---link to View page---
+  get "/view_post/:p_id" do
+    post = @posts_table.find(params[:p_id])
+    erb :"view_post", locals: {post: post}
+  end
+
+
+  # ---patch to View page---
+  # patch "/view_post/:p_id" do
+  #   @posts_table.update(params[:p_id],{
+  #     image: params[:image],
+  #     description: params[:description]
+  #   })
   # end
+
 
 end #class end

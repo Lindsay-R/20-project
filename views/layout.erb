@@ -32,6 +32,7 @@
     <!--top right Join/SignIn Buttons-->
       <% if session[:user_id] %>
         <% user = @users_table.find(session[:user_id])["username"] %>
+
         <!--if logged in-->
 
           <article class="one_third">
@@ -40,7 +41,7 @@
               <ul><%= user.capitalize %>
                 <li>Favorites</li>
                 <li>Settings</li>
-                <li><a href="/post_page">Post</a></li>
+                <li><a href="/post_page">Create A Post</a></li>
                 <li>
                   <form action="/logout" method="post">
                     <input class="strip_button" type="submit" value=" Logout">
