@@ -2,6 +2,7 @@ require "sinatra"
 require "active_record"
 require "rack-flash"
 require_relative "lib/users_table"
+require_relative "lib/posts_table"
 require "gschool_database_connection"
 
 class App < Sinatra::Application
@@ -13,7 +14,9 @@ class App < Sinatra::Application
     @users_table = UsersTable.new(
       GschoolDatabaseConnection::DatabaseConnection.establish(ENV["RACK_ENV"])
     )
-
+    @posts_table = PostsTable.new(
+      GschoolDatabaseConnection::DatabaseConnection.establish(ENV["RACK_ENV"])
+    )
   end
 
   get "/" do
@@ -93,5 +96,18 @@ class App < Sinatra::Application
     redirect "/"
   end
 
+  # ---link to Post page---
+  get "/post_page" do
+    erb :post_page
+  end
+
+  #---Post page Form---
+  # post "/post_page" do
+  #   image = params[:image]
+  #   description = params[:description]
+  #   @posts_table.create(image, description)
+  #   flash[:notice] = "Post created"
+  #   redirect "/"
+  # end
 
 end #class end

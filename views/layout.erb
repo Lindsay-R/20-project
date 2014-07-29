@@ -37,17 +37,19 @@
           <article class="one_third">
             <div class="join_signin_buttons">
 
+              <ul><%= user.capitalize %>
+                <li>Favorites</li>
+                <li>Settings</li>
+                <li><a href="/post_page">Post</a></li>
+                <li>
+                  <form action="/logout" method="post">
+                    <input class="strip_button" type="submit" value=" Logout">
+                  </form>
+                </li>
+              </ul>
 
-              <select>
-                <option value="" selected="selected"><%= user.capitalize %></option>
-                <option value="/favorites">Favorites</option>
-                <option value="/registration">Link</option>
-                <option value="/settings">Settings</option>
-              </select>
 
-              <form action="/logout" method="post">
-                <input class="strip_button" type="submit" value=" Logout">
-              </form>
+
 
             </div>
           </article>
