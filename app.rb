@@ -116,12 +116,18 @@ class App < Sinatra::Application
   # ---link to View page---
   # get "/view_post/:p_id" do
   #   post = @posts_table.find(params[:p_id])
+  #   session[:p_id] = post["p_id"]
   #   erb :"view_post", locals: {post: post}
   # end
 
+  get "/view_post/:p_id" do  #like friend page
 
-  # ---patch to View page---
+  end
+
+
+  #---patch to View page---
   # patch "/view_post/:p_id" do
+  #
   #   @posts_table.update(params[:p_id],{
   #     image: params[:image],
   #     description: params[:description]
